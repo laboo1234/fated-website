@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a2d3a"/>
+      <stop offset="100%" stop-color="#0f1a24"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5fc9a5" stop-opacity="0.5"/>
+      <stop offset="50%" stop-color="#8dd9bf"/>
+      <stop offset="100%" stop-color="#5fc9a5" stop-opacity="0.5"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="35%" cy="35%" r="55%">
+      <stop offset="0%" stop-color="#5fc9a5" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#5fc9a5" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <g stroke="rgba(95,201,165,0.10)" stroke-width="1" fill="none">
+    <path d="M0 80 H1200 M0 160 H1200 M0 240 H1200 M0 320 H1200 M0 400 H1200 M0 480 H1200 M0 560 H1200"/>
+    <path d="M80 0 V630 M200 0 V630 M320 0 V630 M440 0 V630 M560 0 V630 M680 0 V630 M800 0 V630 M920 0 V630 M1040 0 V630 M1160 0 V630"/>
+  </g>
+  <polyline points="0,520 70,500 130,510 200,470 260,485 330,420 410,440 480,360 560,395 640,320 720,340 810,260 890,300 970,220 1060,250 1140,160 1200,180" fill="none" stroke="url(#line)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" filter="drop-shadow(0 0 14px rgba(95,201,165,0.5))"/>
+  <text x="80" y="290" font-family="Karla, system-ui, sans-serif" font-weight="700" font-size="112" fill="#e8eef1" letter-spacing="2">Fated AI</text>
+  <text x="80" y="350" font-family="Karla, system-ui, sans-serif" font-weight="400" font-size="32" fill="rgba(232,238,241,0.7)" letter-spacing="1.2">Traditional thesis meets algorithmic execution.</text>
+</svg>

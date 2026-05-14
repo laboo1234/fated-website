@@ -1,11 +1,13 @@
 :root {
   --bg: #0f1a24;
   --bg-accent: #1a2d3a;
+  --bg-deeper: #0a1219;
   --accent: #5fc9a5;
   --accent-soft: #8dd9bf;
   --fg: #e8eef1;
   --fg-dim: rgba(232, 238, 241, 0.72);
   --fg-faint: rgba(232, 238, 241, 0.32);
+  --border: rgba(95, 201, 165, 0.18);
 }
 
 *,
@@ -16,27 +18,28 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
-  height: 100%;
+  min-height: 100%;
 }
 
 body {
   font-family: 'Karla', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   color: var(--fg);
   background: var(--bg);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .hero {
-  flex: 1;
   position: relative;
   display: grid;
   place-items: center;
+  min-height: 100vh;
   overflow: hidden;
   background:
     radial-gradient(ellipse at 30% 30%, rgba(95, 201, 165, 0.08) 0%, transparent 55%),
@@ -124,14 +127,73 @@ body {
   line-height: 1.5;
 }
 
+.approach {
+  background: var(--bg-deeper);
+  padding: clamp(5rem, 12vw, 9rem) 24px;
+  border-top: 1px solid var(--border);
+}
+
+.approach-inner {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.approach h2 {
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: 1.75rem;
+  color: var(--fg);
+}
+
+.approach h2::after {
+  content: '';
+  display: block;
+  width: 2.5rem;
+  height: 2px;
+  background: var(--accent);
+  margin-top: 0.75rem;
+  border-radius: 2px;
+}
+
+.approach > .approach-inner > p {
+  font-size: clamp(1.02rem, 1.5vw, 1.15rem);
+  color: var(--fg-dim);
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+  max-width: 44rem;
+}
+
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 2rem;
+  margin-top: 3.5rem;
+}
+
+.pillar h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.85rem;
+}
+
+.pillar p {
+  font-size: 0.98rem;
+  color: var(--fg-dim);
+  line-height: 1.6;
+}
+
 footer {
-  padding: 1.5rem 24px;
+  padding: 1.75rem 24px;
   text-align: center;
   font-size: 0.82rem;
   letter-spacing: 0.06em;
   color: var(--fg-faint);
-  position: relative;
-  z-index: 1;
+  background: var(--bg-deeper);
+  border-top: 1px solid var(--border);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -141,5 +203,8 @@ footer {
   }
   .content {
     animation: none;
+  }
+  html {
+    scroll-behavior: auto;
   }
 }
