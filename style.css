@@ -1,0 +1,145 @@
+:root {
+  --bg: #0f1a24;
+  --bg-accent: #1a2d3a;
+  --accent: #5fc9a5;
+  --accent-soft: #8dd9bf;
+  --fg: #e8eef1;
+  --fg-dim: rgba(232, 238, 241, 0.72);
+  --fg-faint: rgba(232, 238, 241, 0.32);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Karla', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--fg);
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hero {
+  flex: 1;
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 30% 30%, rgba(95, 201, 165, 0.08) 0%, transparent 55%),
+    radial-gradient(ellipse at 70% 70%, rgba(141, 217, 191, 0.05) 0%, transparent 55%),
+    linear-gradient(180deg, var(--bg-accent) 0%, var(--bg) 100%);
+}
+
+.grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(95, 201, 165, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(95, 201, 165, 0.06) 1px, transparent 1px);
+  background-size: 64px 64px;
+  -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 85%);
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 85%);
+  pointer-events: none;
+}
+
+.chart {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.85;
+}
+
+.chart-line {
+  fill: none;
+  stroke: url(#line-gradient);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 0 14px rgba(95, 201, 165, 0.45));
+  stroke-dasharray: 4500;
+  stroke-dashoffset: 4500;
+  animation: draw 3.2s cubic-bezier(0.65, 0, 0.35, 1) 0.4s forwards;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 0 24px;
+  animation: rise 1s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.brand {
+  font-size: clamp(2.8rem, 8vw, 5rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  margin-bottom: 1.75rem;
+  background: linear-gradient(180deg, var(--fg) 0%, rgba(232, 238, 241, 0.78) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tagline {
+  font-size: clamp(1.05rem, 2.2vw, 1.4rem);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--fg-dim);
+  max-width: 38rem;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+footer {
+  padding: 1.5rem 24px;
+  text-align: center;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  color: var(--fg-faint);
+  position: relative;
+  z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chart-line {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+  .content {
+    animation: none;
+  }
+}
