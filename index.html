@@ -13,57 +13,89 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Fated AI">
   <meta name="twitter:description" content="Research-driven proprietary trading. Traditional thesis meets algorithmic execution.">
-  <meta name="theme-color" content="#0f1a24">
+  <meta name="theme-color" content="#F5F2EC">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="hero">
-    <div class="grid-bg" aria-hidden="true"></div>
-    <svg class="chart" viewBox="0 0 1200 600" preserveAspectRatio="none" aria-hidden="true">
-      <defs>
-        <linearGradient id="line-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stop-color="#5fc9a5" stop-opacity="0.4"/>
-          <stop offset="50%" stop-color="#8dd9bf" stop-opacity="0.9"/>
-          <stop offset="100%" stop-color="#5fc9a5" stop-opacity="0.4"/>
-        </linearGradient>
-      </defs>
-      <polyline class="chart-line" points="0,440 80,420 140,430 200,400 260,410 320,360 400,370 460,310 520,330 600,280 660,290 740,240 820,260 880,200 960,220 1040,160 1120,180 1200,120"/>
-    </svg>
-    <div class="content">
-      <h1 class="brand">Fated AI</h1>
-      <p class="tagline">Traditional thesis meets algorithmic execution.</p>
+  <header class="masthead">
+    <div class="masthead-inner">
+      <a href="/" class="wordmark" aria-label="Fated AI home">Fated AI</a>
+      <nav aria-label="Primary">
+        <a href="#approach">Approach</a>
+        <a href="#research">Research</a>
+      </nav>
     </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <p class="kicker">Proprietary trading · digital-asset markets</p>
+        <h1 class="lead">
+          Traditional thesis<br>
+          meets <em>algorithmic execution.</em>
+        </h1>
+        <p class="dek">
+          Fated AI is a research-driven proprietary trading firm. We focus on short-duration opportunities in liquid digital-asset markets, where structure, liquidity, and attention all move on compressed timeframes.
+        </p>
+        <svg class="hero-mark" viewBox="0 0 240 60" aria-hidden="true">
+          <polyline points="0,46 22,42 38,44 56,36 72,38 92,28 110,30 128,20 148,24 166,14 184,18 204,8 224,12 240,4" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </section>
+
+    <section id="approach" class="approach">
+      <div class="rule"></div>
+      <div class="approach-inner">
+        <h2 class="section-label">Approach</h2>
+
+        <div class="approach-prose">
+          <p class="opener">
+            The work sits at the intersection of quantitative research, real-time data infrastructure, and disciplined risk management.
+          </p>
+          <p>
+            We run both discretionary and systematic strategies, and we hold both to the same calibration standard. Hypotheses are tested against live market data before they become positions. We treat data quality as a first-order problem.
+          </p>
+        </div>
+
+        <ol class="pillars">
+          <li class="pillar">
+            <span class="pillar-num">01</span>
+            <h3>Research</h3>
+            <p>Hypotheses tested against live market data before they become positions. Source quality and attribution are first-order problems, not afterthoughts.</p>
+          </li>
+          <li class="pillar">
+            <span class="pillar-num">02</span>
+            <h3>Execution</h3>
+            <p>Discovery and entry are automated; review is human. Latency and slippage are budgeted, not assumed. Discretion is allowed, then audited.</p>
+          </li>
+          <li class="pillar">
+            <span class="pillar-num">03</span>
+            <h3>Risk</h3>
+            <p>Dollar-denominated limits, hard kill switches, weekly post-mortems. The losing source always exists — we find it and weight it down.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="research" class="research">
+      <div class="rule"></div>
+      <div class="research-inner">
+        <h2 class="section-label">Research</h2>
+        <p class="research-empty">Research notes are forthcoming. We publish a small number of pieces each year — quality over cadence.</p>
+      </div>
+    </section>
   </main>
 
-  <section class="approach">
-    <div class="approach-inner">
-      <h2>Approach</h2>
-      <p>Fated AI is a research-driven proprietary trading firm. We focus on short-duration opportunities in liquid digital-asset markets, where structure, liquidity, and attention all move on compressed timeframes.</p>
-      <p>The work sits at the intersection of quantitative research, real-time data infrastructure, and disciplined risk management. We run both discretionary and systematic strategies, and we hold both to the same calibration standard.</p>
-
-      <div class="pillars">
-        <div class="pillar">
-          <h3>Research</h3>
-          <p>Hypotheses are tested against live market data before they become positions. We treat data quality as a first-order problem.</p>
-        </div>
-        <div class="pillar">
-          <h3>Execution</h3>
-          <p>Discovery and entry are automated; review is human. Latency and slippage are budgeted, not assumed.</p>
-        </div>
-        <div class="pillar">
-          <h3>Risk</h3>
-          <p>Dollar-denominated limits, hard kill switches, weekly post-mortems. The losing source always exists — we find it and weight it down.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <footer>
-    <p>&copy; 2026 Fated AI</p>
+    <div class="footer-inner">
+      <p class="footer-mark">Fated AI</p>
+      <p class="footer-meta">&copy; 2026 · fated.ai</p>
+    </div>
   </footer>
 </body>
 </html>

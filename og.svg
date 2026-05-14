@@ -1,26 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
-  <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1a2d3a"/>
-      <stop offset="100%" stop-color="#0f1a24"/>
-    </linearGradient>
-    <linearGradient id="line" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#5fc9a5" stop-opacity="0.5"/>
-      <stop offset="50%" stop-color="#8dd9bf"/>
-      <stop offset="100%" stop-color="#5fc9a5" stop-opacity="0.5"/>
-    </linearGradient>
-    <radialGradient id="glow" cx="35%" cy="35%" r="55%">
-      <stop offset="0%" stop-color="#5fc9a5" stop-opacity="0.18"/>
-      <stop offset="100%" stop-color="#5fc9a5" stop-opacity="0"/>
-    </radialGradient>
-  </defs>
-  <rect width="1200" height="630" fill="url(#bg)"/>
-  <rect width="1200" height="630" fill="url(#glow)"/>
-  <g stroke="rgba(95,201,165,0.10)" stroke-width="1" fill="none">
-    <path d="M0 80 H1200 M0 160 H1200 M0 240 H1200 M0 320 H1200 M0 400 H1200 M0 480 H1200 M0 560 H1200"/>
-    <path d="M80 0 V630 M200 0 V630 M320 0 V630 M440 0 V630 M560 0 V630 M680 0 V630 M800 0 V630 M920 0 V630 M1040 0 V630 M1160 0 V630"/>
+  <rect width="1200" height="630" fill="#F5F2EC"/>
+  <g stroke="rgba(26,26,26,0.05)" stroke-width="1" fill="none">
+    <line x1="80" y1="540" x2="1120" y2="540"/>
   </g>
-  <polyline points="0,520 70,500 130,510 200,470 260,485 330,420 410,440 480,360 560,395 640,320 720,340 810,260 890,300 970,220 1060,250 1140,160 1200,180" fill="none" stroke="url(#line)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" filter="drop-shadow(0 0 14px rgba(95,201,165,0.5))"/>
-  <text x="80" y="290" font-family="Karla, system-ui, sans-serif" font-weight="700" font-size="112" fill="#e8eef1" letter-spacing="2">Fated AI</text>
-  <text x="80" y="350" font-family="Karla, system-ui, sans-serif" font-weight="400" font-size="32" fill="rgba(232,238,241,0.7)" letter-spacing="1.2">Traditional thesis meets algorithmic execution.</text>
+  <text x="80" y="240" font-family="'Newsreader', Georgia, serif" font-weight="600" font-size="22" letter-spacing="3.5" fill="#C2603E" text-transform="uppercase">PROPRIETARY TRADING · DIGITAL-ASSET MARKETS</text>
+  <text x="80" y="340" font-family="'Newsreader', Georgia, serif" font-weight="400" font-size="76" fill="#1A1A1A" letter-spacing="-1.2">Traditional thesis</text>
+  <text x="80" y="420" font-family="'Newsreader', Georgia, serif" font-weight="400" font-size="76" fill="#1A1A1A" letter-spacing="-1.2">meets <tspan font-style="italic" fill="#C2603E">algorithmic execution.</tspan></text>
+  <polyline points="80,560 140,556 188,558 228,548 268,550 312,532 358,536 398,516 442,524 482,500 526,506 568,478 612,488 656,452 696,462 738,432 778,440 820,408 860,418" fill="none" stroke="#C2603E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+  <text x="80" y="600" font-family="'Newsreader', Georgia, serif" font-style="italic" font-weight="500" font-size="24" fill="#3A332C">Fated AI</text>
+  <text x="1120" y="600" font-family="'Karla', system-ui, sans-serif" font-size="18" fill="#6B6259" text-anchor="end" letter-spacing="0.8">fated.ai</text>
 </svg>
